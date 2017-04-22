@@ -1,4 +1,4 @@
-<div class="apidocDiv">
+<html><head></head><body><div class="apidocDiv">
 <style>
 /*csslint
 */
@@ -47,17 +47,10 @@
 }
 </style>
 <h1>api documentation for
-    <a
-
-        href="https://github.com/stream-utils/raw-body#readme"
-
-    >raw-body (v2.2.0)</a>
+    <a href="https://github.com/stream-utils/raw-body#readme">raw-body (v2.2.0)</a>
 </h1>
 <h4>Get and validate the raw body of a readable stream.</h4>
-<div class="apidocSectionDiv"><a
-    href="#apidoc.tableOfContents"
-    id="apidoc.tableOfContents"
-><h1>table of contents</h1></a><ol>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
 
     <li class="apidocModuleLi"><a href="#apidoc.module.raw-body">module raw-body</a><ol>
 
@@ -89,38 +82,38 @@
   var done = callback
   var opts = options || {}
 
-  if (options === true || typeof options === &#x27;string&#x27;) {
+  if (options === true || typeof options === 'string') {
     // short cut for encoding
     opts = {
       encoding: options
     }
   }
 
-  if (typeof options === &#x27;function&#x27;) {
+  if (typeof options === 'function') {
     done = options
     opts = {}
   }
 
   // validate callback is a function, if provided
-  if (done !== undefined &#x26;&#x26; typeof done !== &#x27;function&#x27;) {
-    throw new TypeError(&#x27;argument callback must be a function&#x27;)
+  if (done !== undefined &amp;&amp; typeof done !== 'function') {
+    throw new TypeError('argument callback must be a function')
   }
 
   // require the callback without promises
-  if (!done &#x26;&#x26; !global.Promise) {
-    throw new TypeError(&#x27;argument callback is required&#x27;)
+  if (!done &amp;&amp; !global.Promise) {
+    throw new TypeError('argument callback is required')
   }
 
   // get encoding
   var encoding = opts.encoding !== true
     ? opts.encoding
-    : &#x27;utf-8&#x27;
+    : 'utf-8'
 
   // convert the limit to an integer
   var limit = bytes.parse(opts.limit)
 
   // convert the expected length to an integer
-  var length = opts.length != null &#x26;&#x26; !isNaN(opts.length)
+  var length = opts.length != null &amp;&amp; !isNaN(opts.length)
     ? parseInt(opts.length, 10)
     : null
 
@@ -148,3 +141,4 @@
     ]
 </div>
 </div>
+</body></html>

@@ -61,12 +61,84 @@
 
     <li class="apidocModuleLi"><a href="#apidoc.module.raw-body">module raw-body</a><ol>
 
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.raw-body.raw-body">
+            function <span class="apidocSignatureSpan"></span>raw-body
+            <span class="apidocSignatureSpan">(stream, options, callback)</span>
+            </a>
+
+        </li>
+
     </ol></li>
 
 </ol></div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.raw-body" id="apidoc.module.raw-body">module raw-body</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.raw-body.raw-body" id="apidoc.element.raw-body.raw-body">
+        function <span class="apidocSignatureSpan"></span>raw-body
+        <span class="apidocSignatureSpan">(stream, options, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getRawBody(stream, options, callback) {
+  var done = callback
+  var opts = options || {}
+
+  if (options === true || typeof options === &#x27;string&#x27;) {
+    // short cut for encoding
+    opts = {
+      encoding: options
+    }
+  }
+
+  if (typeof options === &#x27;function&#x27;) {
+    done = options
+    opts = {}
+  }
+
+  // validate callback is a function, if provided
+  if (done !== undefined &#x26;&#x26; typeof done !== &#x27;function&#x27;) {
+    throw new TypeError(&#x27;argument callback must be a function&#x27;)
+  }
+
+  // require the callback without promises
+  if (!done &#x26;&#x26; !global.Promise) {
+    throw new TypeError(&#x27;argument callback is required&#x27;)
+  }
+
+  // get encoding
+  var encoding = opts.encoding !== true
+    ? opts.encoding
+    : &#x27;utf-8&#x27;
+
+  // convert the limit to an integer
+  var limit = bytes.parse(opts.limit)
+
+  // convert the expected length to an integer
+  var length = opts.length != null &#x26;&#x26; !isNaN(opts.length)
+    ? parseInt(opts.length, 10)
+    : null
+
+  if (done) {
+    // classic callback style
+    return readStream(stream, encoding, length, limit, done)
+  }
+
+  return new Promise(function executor (resolve, reject) {
+    readStream(stream, encoding, length, limit, function onRead (err, buf) {
+      if (err) return reject(err)
+      resolve(buf)
+    })
+  })
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
 
 </div>
 
