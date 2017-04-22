@@ -1,9 +1,14 @@
-# api documentation for  [raw-body (v2.2.0)](https://github.com/stream-utils/raw-body#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-raw-body.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-raw-body) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-raw-body.svg)](https://travis-ci.org/npmdoc/node-npmdoc-raw-body)
+# npmdoc-raw-body
+
+#### api documentation for  [raw-body (v2.2.0)](https://github.com/stream-utils/raw-body#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-raw-body.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-raw-body) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-raw-body.svg)](https://travis-ci.org/npmdoc/node-npmdoc-raw-body)
+
 #### Get and validate the raw body of a readable stream.
 
-[![NPM](https://nodei.co/npm/raw-body.png?downloads=true)](https://www.npmjs.com/package/raw-body)
+[![NPM](https://nodei.co/npm/raw-body.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/raw-body)
 
-[![apidoc](https://npmdoc.github.io/node-npmdoc-raw-body/build/screenCapture.buildNpmdoc.browser._2Fhome_2Ftravis_2Fbuild_2Fnpmdoc_2Fnode-npmdoc-raw-body_2Ftmp_2Fbuild_2Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-raw-body/build/apidoc.html)
+- [https://npmdoc.github.io/node-npmdoc-raw-body/build/apidoc.html](https://npmdoc.github.io/node-npmdoc-raw-body/build/apidoc.html)
+
+[![apidoc](https://npmdoc.github.io/node-npmdoc-raw-body/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-raw-body/build/apidoc.html)
 
 ![npmPackageListing](https://npmdoc.github.io/node-npmdoc-raw-body/build/screenCapture.npmPackageListing.svg)
 
@@ -18,7 +23,6 @@
 {
     "author": {
         "name": "Jonathan Ong",
-        "email": "me@jongleberry.com",
         "url": "http://jongleberry.com"
     },
     "bugs": {
@@ -26,12 +30,10 @@
     },
     "contributors": [
         {
-            "name": "Douglas Christopher Wilson",
-            "email": "doug@somethingdoug.com"
+            "name": "Douglas Christopher Wilson"
         },
         {
-            "name": "Raynos",
-            "email": "raynos2@gmail.com"
+            "name": "Raynos"
         }
     ],
     "dependencies": {
@@ -71,17 +73,14 @@
     "license": "MIT",
     "maintainers": [
         {
-            "name": "dougwilson",
-            "email": "doug@somethingdoug.com"
+            "name": "dougwilson"
         },
         {
-            "name": "jongleberry",
-            "email": "jonathanrichardong@gmail.com"
+            "name": "jongleberry"
         }
     ],
     "name": "raw-body",
     "optionalDependencies": {},
-    "readme": "ERROR: No README data found!",
     "repository": {
         "type": "git",
         "url": "git+https://github.com/stream-utils/raw-body.git"
@@ -92,19 +91,10 @@
         "test-cov": "istanbul cover node_modules/mocha/bin/_mocha -- --trace-deprecation --reporter dot --check-leaks test/",
         "test-travis": "istanbul cover node_modules/mocha/bin/_mocha --report lcovonly -- --trace-deprecation --reporter spec --check-leaks test/"
     },
-    "version": "2.2.0"
+    "version": "2.2.0",
+    "bin": {}
 }
 ```
-
-
-
-# <a name="apidoc.tableOfContents"></a>[table of contents](#apidoc.tableOfContents)
-
-#### [module raw-body](#apidoc.module.raw-body)
-
-
-
-# <a name="apidoc.module.raw-body"></a>[module raw-body](#apidoc.module.raw-body)
 
 
 
